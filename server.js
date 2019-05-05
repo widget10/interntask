@@ -42,19 +42,19 @@ app.use('/course', courseRoutes);
 
 
 
-// if(process.env.NODE_ENV === 'production')
-// {
-//     //Express serves prod asstes like main.css and main.js 
-//     app.use(express.static('client/build'));
+if(process.env.NODE_ENV === 'production')
+{
+    //Express serves prod asstes like main.css and main.js 
+    app.use(express.static('client/build'));
 
-//     //Express serves index.html for internal routes (Router)
-//     const path = require('path');
-//     app.get
-//     ('*', (req,res) =>  {
-//         res.sendFile(path.resolve(__dirname, 'client', 'build','index.html'));
-//     });
+    //Express serves index.html for internal routes (Router)
+    const path = require('path');
+    app.get
+    ('*', (req,res) =>  {
+        res.sendFile(path.resolve(__dirname, 'client', 'build','index.html'));
+    });
 
-// }
+}
 
 
 const PORT = process.env.PORT ||  4000;
