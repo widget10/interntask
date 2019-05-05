@@ -8,7 +8,9 @@ let Course = require('./coursemodel');
 const keys=require("./config/keys");
 
 const MONGODB_URI =
-   keys.mongoURI;
+ //  keys.mongoURI;
+ "mongodb+srv://Vijit:VLQ7hiDd.USGZtF@cluster0-4mx9y.mongodb.net/test?retryWrites=true";
+
 
 app.use(cors());
 app.use(bodyParser.json());
