@@ -60,7 +60,7 @@ app.use('/course', courseRoutes);
 const PORT = process.env.PORT ||  4000;
 
 mongoose
-  .connect(MONGODB_URI,{ useNewUrlParser: true })
+  .connect(process.env.MONGODB_URI ||  "mongodb+srv://Vijit:VLQ7hiDd.USGZtF@cluster0-4mx9y.mongodb.net/test?retryWrites=true" ,{ useNewUrlParser: true })
   .then(result => {
     app.listen(PORT, function() {
         console.log("Server is running on Port: " + PORT);
