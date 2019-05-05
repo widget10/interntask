@@ -5,11 +5,10 @@ const cors = require('cors');
 const mongoose = require('mongoose');
 const courseRoutes = express.Router();
 let Course = require('./coursemodel');
-//const keys=require("./config/keys");
+const keys=require("./config/keys");
 
 const MONGODB_URI =
-"mongodb+srv://Vijit:VLQ7hiDd.USGZtF@cluster0-4mx9y.mongodb.net/test?retryWrites=true";
-
+   keys.mongoURI;
 
 app.use(cors());
 app.use(bodyParser.json());
