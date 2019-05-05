@@ -49,9 +49,14 @@ if(process.env.NODE_ENV === 'production')
 
     //Express serves index.html for internal routes (Router)
     const path = require('path');
+    // app.get
+    // ('*', (req,res) =>  {
+    //     res.sendFile(path.resolve(__dirname, 'client', 'build','index.html'));
+    // });
+
     app.get
-    ('*', (req,res) =>  {
-        res.sendFile(path.resolve(__dirname, 'client', 'build','index.html'));
+    ('/', (req,res) =>  {
+            res.send("hello");
     });
 
 }
